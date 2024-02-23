@@ -1,18 +1,3 @@
-Game Panel:
- 
-Making Folders (panel):
- 
-mkdir pterodactyl
- 
-cd pterodactyl
- 
-mkdir panel
- 
-cd panel
- 
-nano docker-compose.yml
- 
- 
 version: '3.8'
 x-common:
   database:
@@ -93,12 +78,3 @@ networks:
     ipam:
       config:
         - subnet: 172.20.0.0/16
- 
- 
-Start the Panel:
- 
-docker-compose up -d
- 
-Create a user for the panel:
- 
-docker-compose run --rm panel php artisan p:user:make
