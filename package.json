@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "scripts": {
     "start": "docker-compose up -d && docker-compose run --rm panel php artisan p:user:make",
-    "vercel-build": "echo 'Building on Vercel'"
+    "build": "mkdir dist && echo 'Building on Vercel' > dist/index.html"
   }
 }
