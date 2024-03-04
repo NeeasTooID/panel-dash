@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "docker-compose.yml",
+      "use": "@vercel/docker"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/docker-compose up -d",
+      "dest": "/docker-compose up -d"
+    },
+    {
+      "src": "/docker-compose run --rm panel php artisan p:user:make",
+      "dest": "/docker-compose run --rm panel php artisan p:user:make"
+    }
+  ]
+}
